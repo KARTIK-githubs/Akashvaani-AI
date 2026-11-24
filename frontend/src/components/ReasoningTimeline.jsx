@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { aiServiceUrl } from '../services/aiApi';
 
 const ReasoningTimeline = ({ userId = 'demo' }) => {
   const [steps, setSteps] = useState([]);
@@ -7,7 +8,7 @@ const ReasoningTimeline = ({ userId = 'demo' }) => {
   useEffect(() => {
     const fetchReasoning = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/agents/reasoning/${userId}`);
+        const response = await fetch(`${aiServiceUrl}/api/agents/reasoning/${userId}`);
         if (!response.ok) throw new Error('Network error');
         const data = await response.json();
         setSteps(data);
