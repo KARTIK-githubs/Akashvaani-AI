@@ -1,3 +1,5 @@
+> **Frontend configuration.** Set `VITE_BACKEND_API_URL` to the Express API base including `/api` and `VITE_AI_SERVICE_URL` to the FastAPI service origin when deploying. Local defaults are `http://localhost:5000/api` and `http://localhost:8000`. The frontend uses `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Keep `SUPABASE_SERVICE_ROLE_KEY` in the server environments only.
+
 # Akashvaani AI
 
 A HackMSIT team prototype for discovering government schemes. The application combines document OCR, profile extraction and eligibility scoring to help users explore relevant schemes.
