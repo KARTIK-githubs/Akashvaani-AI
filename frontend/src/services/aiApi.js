@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const aiApi = axios.create({
-  baseURL: 'http://localhost:8000',
-});
+export const aiServiceUrl = (import.meta.env.VITE_AI_SERVICE_URL || 'http://localhost:8000').replace(/\/+$/, '');
+
+const aiApi = axios.create({ baseURL: aiServiceUrl });
 
 
 const handleRequest = async (request) => {
